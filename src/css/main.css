@@ -1,0 +1,65 @@
+:root {
+  --medium-turquoise: #59d2cd;
+  --middle-blue: #78e2de;
+  --granite-gray: #655965;
+  --msu-green: #114443;
+  --raisin-black: #232426;
+  
+  --main-font: 'Futura', sans-serif;
+}
+
+/**,
+*::after,
+*::before {
+  box-sizing: border-box;
+}*/
+
+html {
+  font-size: 16px;
+}
+body {
+  background: url('../images/main-bg-1280.jpg') no-repeat;
+}
+.logo {
+  position: absolute;
+  top: calc((100% - 15.5rem)/2);
+  left: calc((100% - 15.5rem)/2);
+  width: 15rem;
+  height: 15rem;
+  border: .5rem solid #fff;
+  font-family: var(--main-font);
+  color: #fff;
+  box-shadow: 0 0 5px 5px var(--granite-gray);
+  transition: all 1s cubic-bezier(0.67,-0.29, 0.85, 0.35);
+}
+.logo:hover {
+  border: 1.2rem solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.logo:hover .sign-up {
+  opacity: 1;
+  border-bottom: 1px solid #fff;
+}
+
+.sign-up {
+  position: absolute;
+  bottom: 0;
+  right: 0.8rem;
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.67,-0.29, 0.85, 0.35);
+}
+.sign-up:hover {
+  border-bottom: 3px solid #fff;
+}
+.title,
+.subtitle {
+  margin: 0;
+  padding: 0.8rem;
+}
+.title {
+  font-size: 4rem;
+}
+.subtitle {
+  font-size: 1.2rem;
+}
