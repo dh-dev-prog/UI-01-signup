@@ -1,3 +1,5 @@
+/*Root element*/
+
 :root {
   --medium-turquoise: #59d2cd;
   --middle-blue: #78e2de;
@@ -5,52 +7,51 @@
   --msu-green: #114443;
   --raisin-black: #232426;
   
-  --main-font: 'Futura', sans-serif;
+  --main-font: Futura,"Trebuchet MS",Arial,sans-serif;
 }
-
-/**,
-*::after,
-*::before {
-  box-sizing: border-box;
-}*/
-
+/*Base*/
 html {
   font-size: 16px;
+  font-family: var(--main-font);
 }
 body {
   background: url('../images/main-bg-1280.jpg') no-repeat;
 }
-.logo {
+
+/*Modules*/
+
+/*logo*/
+.logo,
+.logo-bis {
   position: absolute;
+  font-family: var(--main-font);
+  color: #fff;
+  border: .5rem solid #fff;
+}
+.logo {
+  display: none;
   top: calc((100% - 15.5rem)/2);
   left: calc((100% - 15.5rem)/2);
   width: 15rem;
   height: 15rem;
-  border: .5rem solid #fff;
-  font-family: var(--main-font);
-  color: #fff;
-  box-shadow: 0 0 5px 5px var(--granite-gray);
+  box-shadow: 0 0 10px 2px var(--msu-green);
   transition: all 1s cubic-bezier(0.67,-0.29, 0.85, 0.35);
+}
+.logo-bis {
+  display: block;
+  top: 4rem;
+  left: 4rem;
+  width: 10rem;
+  height: 10rem;
 }
 .logo:hover {
   border: 1.2rem solid #fff;
   border-radius: 5px;
   cursor: pointer;
 }
-.logo:hover .sign-up {
+.logo:hover .btn-sign-up {
   opacity: 1;
   border-bottom: 1px solid #fff;
-}
-
-.sign-up {
-  position: absolute;
-  bottom: 0;
-  right: 0.8rem;
-  opacity: 0;
-  transition: all 1s cubic-bezier(0.67,-0.29, 0.85, 0.35);
-}
-.sign-up:hover {
-  border-bottom: 3px solid #fff;
 }
 .title,
 .subtitle {
@@ -62,4 +63,48 @@ body {
 }
 .subtitle {
   font-size: 1.2rem;
+}
+.btn-sign-up {
+  position: absolute;
+  bottom: 0;
+  right: 0.8rem;
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.67,-0.29, 0.85, 0.35);
+}
+.btn-sign-up:hover {
+  border-bottom: 3px solid #fff;
+}
+
+
+/*Form*/
+
+.form-signup {
+  position: absolute;
+  top: calc((100% - 80vh)/2);
+  right: 4rem;
+  box-sizing: border-box;
+  width: 30%;
+  height: 80vh;
+  padding: 1.6rem;
+  color: var(--granite-gray);
+  background-color: #fff;
+  border: 2px solid var(--granite-gray);
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px var(--msu-green);
+}
+.signup-title {
+  color: var(--medium-turquoise);
+}
+.signup-input {
+  display: block;
+  width: 50%;
+  padding: 0.4rem 0;
+  margin-bottom: 1.6rem;
+  border: none;
+  border-bottom: 1px solid var(--msu-green);
+  transition: all .5s cubic-bezier(0.67,-0.29, 0.85, 0.35);
+}
+.signup-input:focus {
+  width: 95%;
+  outline: inherit;
 }
