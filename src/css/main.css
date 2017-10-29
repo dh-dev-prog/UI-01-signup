@@ -6,7 +6,7 @@
   --granite-gray: #655965;
   --msu-green: #114443;
   --raisin-black: #232426;
-  
+
   --main-font: Futura,"Trebuchet MS",Arial,sans-serif;
 }
 /*Base*/
@@ -21,15 +21,14 @@ body {
 /*Modules*/
 
 /*logo*/
-.logo,
+.main-logo,
 .logo-bis {
   position: absolute;
   font-family: var(--main-font);
   color: #fff;
   border: .5rem solid #fff;
 }
-.logo {
-  display: none;
+.main-logo {
   top: calc((100% - 15.5rem)/2);
   left: calc((100% - 15.5rem)/2);
   width: 15rem;
@@ -38,19 +37,19 @@ body {
   transition: all 1s cubic-bezier(0.67,-0.29, 0.85, 0.35);
 }
 .logo-bis {
-  display: block;
   top: 4rem;
   left: 4rem;
   width: 10rem;
   height: 10rem;
   z-index: 0;
+  transition: all 1s cubic-bezier(0.67,-0.29, 0.85, 0.35);
 }
-.logo:hover {
+.main-logo:hover {
   border: 1.2rem solid #fff;
   border-radius: 5px;
   cursor: pointer;
 }
-.logo:hover .btn-sign-up {
+.main-logo:hover .btn-sign-up {
   opacity: 1;
   border-bottom: 1px solid #fff;
 }
@@ -81,8 +80,8 @@ body {
 
 .form-signup {
   position: absolute;
-  top: 4rem;
-  left: calc((100vw - 30vw)/2);
+  top: 10vh;
+  margin: 0 2rem;
   box-sizing: border-box;
   width: 30vw;
   min-width: 320px;
@@ -92,18 +91,21 @@ body {
   background-color: #fff;
   border: 2px solid var(--granite-gray);
   border-radius: 10px;
-  box-shadow: 0 0 5px 1px var(--msu-green);
+  box-shadow: 0 0 5px 1px var(--medium-turquoise);
+  z-index: 1;
+  transition: all 1s cubic-bezier(0.67,-0.29, 0.85, 0.35);
 }
 @media only screen and (min-width: 430px) {
   .form-signup {
-    top: 4rem;
     left: inherit;
     right: 4rem;
+    margin: 0;
   }
 }
 .signup-title {
   margin: 0;
   margin-bottom: 1.6rem;
+  font-family: "Arial", sans-serif;
   color: var(--medium-turquoise);
 }
 .signup-input {
@@ -118,4 +120,27 @@ body {
 .signup-input:focus {
   width: 95%;
   outline: inherit;
+}
+
+/*States*/
+
+.hide-right {
+
+  opacity: 0;
+  transform: translateX(100%);
+}
+.hide-left {
+
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.hide-top {
+
+  opacity: 0;
+  transform: translateY(100%);
+}
+.show {
+
+  opacity: 1;
+  transform: translateX(0);
 }
