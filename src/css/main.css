@@ -43,6 +43,7 @@ body {
   left: 4rem;
   width: 10rem;
   height: 10rem;
+  z-index: 0;
 }
 .logo:hover {
   border: 1.2rem solid #fff;
@@ -80,10 +81,11 @@ body {
 
 .form-signup {
   position: absolute;
-  top: calc((100% - 80vh)/2);
-  right: 4rem;
+  top: 4rem;
+  left: calc((100vw - 30vw)/2);
   box-sizing: border-box;
-  width: 30%;
+  width: 30vw;
+  min-width: 320px;
   height: 80vh;
   padding: 1.6rem;
   color: var(--granite-gray);
@@ -92,7 +94,16 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 5px 1px var(--msu-green);
 }
+@media only screen and (min-width: 430px) {
+  .form-signup {
+    top: 4rem;
+    left: inherit;
+    right: 4rem;
+  }
+}
 .signup-title {
+  margin: 0;
+  margin-bottom: 1.6rem;
   color: var(--medium-turquoise);
 }
 .signup-input {
@@ -101,7 +112,7 @@ body {
   padding: 0.4rem 0;
   margin-bottom: 1.6rem;
   border: none;
-  border-bottom: 1px solid var(--msu-green);
+  border-bottom: 4px solid var(--middle-blue);
   transition: all .5s cubic-bezier(0.67,-0.29, 0.85, 0.35);
 }
 .signup-input:focus {
