@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <title>Sign-up</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
   <link rel="stylesheet" href="src/css/main.css">
-  <body>
-    <div class="main-logo">
-      <h1 class="logo-title">MT</h1>
-      <h4 class="logo-subtitle">Music Tutorials</h4>
-      <h5 class="click-msg">Click Me</h5>
-    </div>
-    <div class="logo-bis hide-left">
-      <h1 class="logo-title">MT</h1>
-      <div class="music-anim">
-        <div class="music-anim-bar bar-1"></div>
-        <div class="music-anim-bar bar-2"></div>
-        <div class="music-anim-bar bar-3"></div>
-        <div class="music-anim-bar bar-4"></div>
-        <div class="music-anim-bar bar-5"></div>
-      </div>
-    </div>
-    <form class="form-signup hide-right">
-      <h2 class="signup-title">Sign Up</h2>
-      <input class="signup-input" type="text" placeholder="USERNAME">
-      <input class="signup-input" type="password" placeholder="PASSWORD">
-      <input class="signup-input" type="email" placeholder="EMAIL">
-      <button class="btn btn-submit" type="submit" value="submit">Submit</button>
-    </form>
-  <script src="src/js/index.js"></script>
-  </body>
 </head>
+
+<body>
+  <div class="intro-logo">
+    <h1 class="logo-title">MT</h1>
+    <h4 class="intro-logo-subtitle">Music Tutorials</h4>
+  </div>
+  <div class="click-msg">
+    <div class="click-msg-arrow">&#10552;</div>
+    <h2 class="click-msg-title">Click Me to Join</h2>
+  </div>
+
+  <div class="logo hide-left">
+    <h1 class="logo-title">MT</h1>
+    <div class="music-anim">
+      <div class="music-anim-bar bar-1"></div>
+      <div class="music-anim-bar bar-2"></div>
+      <div class="music-anim-bar bar-3"></div>
+      <div class="music-anim-bar bar-4"></div>
+      <div class="music-anim-bar bar-5"></div>
+    </div>
+  </div>
+  <div id="thanks"></div>
+  <form class="form-signup hide-right">
+    <h2 class="signup-title">Sign Up</h2>
+    <input class="signup-input" type="text" placeholder="USERNAME">
+    <input class="signup-input" type="password" placeholder="PASSWORD">
+    <input class="signup-input" type="email" placeholder="EMAIL">
+    <button class="btn btn-submit" type="submit" value="submit">Submit</button>
+  </form>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="src/js/index.js"></script>
+</body>
+
 </html>
